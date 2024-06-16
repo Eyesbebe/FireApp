@@ -221,6 +221,7 @@
           data: {
             labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
             datasets: [
+              
               {
                 label: countries[0],
                 borderColor: "#1d7af3",
@@ -269,19 +270,28 @@
             responsive: true,
             maintainAspectRatio: false,
             legend: {
-              position: "top",
+              position: "bottom",
+            },
+            title: {
+              display: true,
+              text: "Top Three Countries with Most Fire Incidents",
             },
             tooltips: {
-              bodySpacing: 4,
-              mode: "nearest",
-              intersect: 0,
-              position: "nearest",
-              xPadding: 10,
-              yPadding: 10,
-              caretPadding: 10,
+              mode: "index",
+              intersect: false,
             },
-            layout: {
-              padding: { left: 15, right: 15, top: 15, bottom: 15 },
+            responsive: true,
+            scales: {
+              xAxes: [
+                {
+                  stacked: true,
+                },
+              ],
+              yAxes: [
+                {
+                  stacked: true,
+                },
+              ],
             },
           },
         });
@@ -385,7 +395,7 @@
 </script>
 <script>
     // var lineChart = document.getElementById("lineChart").getContext("2d"),
-    var barChart = document.getElementById("barChart").getContext("2d"),
+    var barChart = document.getElementById("barChart").getContext("2d")
     //pieChart = document.getElementById("pieChart").getContext("2d"),
    
 

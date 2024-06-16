@@ -31,7 +31,7 @@
     <div class="wrapper">
       <div class="main-header">
         <!-- Logo Header -->
-        <div class="logo-header" data-background-color="blue">
+        <div class="logo-header" data-background-color="green2">
           <a href="index.html" class="logo">
             <img src="{% static 'img/logo.svg' %}" alt="navbar brand" class="navbar-brand" />
           </a>
@@ -50,7 +50,7 @@
         <!-- End Logo Header -->
 
         <!-- Navbar Header -->
-        <nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2">
+        <nav class="navbar navbar-header navbar-expand-lg" data-background-color="green">
           <div class="container-fluid">
             <div class="collapse" id="search-nav">
               
@@ -104,7 +104,7 @@
             
             <ul class="nav nav-primary">
               <li class="nav-item active">
-                <a href="{% url 'home' %}" class="collapsed" aria-expanded="false">
+                <a href="{% url 'ChartJs' %}" class="collapsed" aria-expanded="false">
                     <i class="fas fa-home"></i>
                     <p>Dashboard</p>
                 </a>
@@ -117,6 +117,31 @@
               </li>
               
 
+
+             
+
+
+              <li class="nav-item">
+                <a data-toggle="collapse" href="#maps">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <p>Maps</p>
+                  <span class="caret"></span>
+                </a>
+                <div class="collapse" id="maps">
+                  <ul class="nav nav-collapse">
+                    <li>
+                      <a href="{% url 'map-station' %}">
+                        <span class="sub-item">Fire Stations</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="{% url 'fire_incidents_map' %}">
+                        <span class="sub-item">Fire Incidents</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
 
               <li class="nav-item">
                 <a data-toggle="collapse" href="#records">
@@ -161,29 +186,6 @@
               </li>
 
 
-
-
-              <li class="nav-item">
-                <a data-toggle="collapse" href="#maps">
-                  <i class="fas fa-map-marker-alt"></i>
-                  <p>Maps</p>
-                  <span class="caret"></span>
-                </a>
-                <div class="collapse" id="maps">
-                  <ul class="nav nav-collapse">
-                    <li>
-                      <a href="{% url 'map-station' %}">
-                        <span class="sub-item">Fire Stations</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="{% url 'fire_incidents_map' %}">
-                        <span class="sub-item">Fire Incidents</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
               <li class="nav-item">
                 <a data-toggle="collapse" href="#charts">
                   <i class="far fa-chart-bar"></i>
